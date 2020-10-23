@@ -1,0 +1,25 @@
+// out: ./Pages.css
+.orders {
+    &__nav {
+        &::-webkit-scrollbar {
+            width: 0;
+            display: none;
+        }
+        overflow: scroll;
+        display: flex;
+        align-items: center;
+        &--link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 125px;
+            height: 30px;
+            color: #bfbfbf;
+            border-bottom: 0;
+            &.active {
+                color: #ff5c00;
+                border-bottom: 1px solid #ff5c00;
+            }
+        }
+    }
+}

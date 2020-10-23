@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 function Incoming() {
     return (
-        <div className="orders__incoming">
-            
-        </div>
+        <React.Fragment>
+            <div className="orders__incoming">
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+                <h1>Incoming page</h1>
+            </div>
+        </React.Fragment>
     )
 }
 
-export default Incoming
+export default Incoming;
