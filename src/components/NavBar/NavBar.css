@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  border-top: 1px solid #ff5c00;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #fff;
+}
+.navbar__item {
+  flex: 0 0 25%;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bfbfbf;
+  text-decoration: none;
+  outline: none;
+}
+.navbar__item svg {
+  transform: scale(1.4);
+}
+.navbar__item svg path {
+  fill: #bfbfbf;
+}
+.navbar__item.active {
+  color: #ff5c00;
+}
+.navbar__item.active svg {
+  transform: scale(1);
+}
+.navbar__item.active svg path {
+  fill: #ff5c00;
+}

@@ -1,0 +1,44 @@
+// out: ./NavBar.css
+@orange: #ff5c00;
+@grey: #bfbfbf;
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+    // border: 1px solid red;
+    border-top: 1px solid @orange;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #fff;
+    &__item {
+        flex: 0 0 25%;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid black;
+        color: @grey;
+        text-decoration: none;
+        outline: none;
+        svg {
+            transform: scale(1.4);
+            path {
+                fill: @grey;
+            }
+        }
+        &.active {
+            color: @orange;
+            svg {
+                transform: scale(1);
+                path {
+                    fill: @orange;
+                }
+            }
+        }
+    }
+}
