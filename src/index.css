@@ -2,7 +2,11 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  transition: all 0.5s;
+  transition: all 0.2s;
+}
+*::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 
 body {
@@ -26,4 +30,13 @@ h1, h2, h3, h4, h5, h6, p {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.app {
+  position: relative;
+}
+.main {
+  width: 100%;
+  height: calc(100vh - 56px - 56px);
+  overflow: scroll;
 }

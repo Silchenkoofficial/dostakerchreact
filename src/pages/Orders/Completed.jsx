@@ -1,18 +1,17 @@
 import React from 'react';
 
-function Completed() {
+import {SendOrderButton} from '../../components';
+
+function Completed({openModal}) {
     return (
         <React.Fragment>
-            <div className="orders__completed">
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
-                <h1>Completed page</h1>
+            <div className="orders__active">
+                <h1>У вас пока нет завершенных заказов</h1>
+                <SendOrderButton
+                    title="Отправить посылку"
+                    description="Курьер отвезет документы, подарок и все, что пожелаете."
+                    openModal={openModal}
+                />
             </div>
         </React.Fragment>
     )

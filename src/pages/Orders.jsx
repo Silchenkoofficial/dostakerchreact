@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import { Route } from 'react-router';
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import classnames from 'classnames';
 
 import {
@@ -11,34 +9,40 @@ import {
 
 import './Pages.css';
 
-function Orders() {
+function Orders({openModal}) {
     const menu = [
-        {name: "Активные", to: '/orders'},
-        {name: "Завершенные", to: 'orders/completed'},
-        {name: "Входящие", to: 'incoming'}
+        {name: "Активные", to: '/orders/active', component: <Active openModal={openModal} />},
+        { name: "Завершенные", to: '/orders/completed', component: <Completed openModal={openModal} />},
+        {name: "Входящие", to: '/orders/incoming', component: <Incoming />}
     ];
     const [activeLink, setActiveLink] = useState(0);
 
     return (
         <div className="orders">
-            <div className="orders__nav">
+            <ul className="orders__nav">
                 {
-                    menu.map((item, index) => 
-                        <Link
-                            className={classnames('orders__nav--link', {
-                                active: activeLink === index && 'active'
-                            })}
-                            onClick={() => setActiveLink(index)}
-                            to={item.to}
-                        >{item.name}</Link>
-                    )
+                    menu.map((item, index) => {
+                        return (
+                            <li
+                                key={index}
+                                className={classnames('orders__nav--link', {
+                                    active: activeLink === index && 'active'
+                                })}
+                                onClick={() => setActiveLink(index)}
+                            >{item.name}</li>
+                        );
+                    })
+                }
+            </ul>
+            <div className="container">
+                {
+                    menu.map((item, index) => {
+                        return (
+                            activeLink === index && <React.Fragment key={index}>{item.component}</React.Fragment>
+                        );
+                    })
                 }
             </div>
-            <Router>
-                <Route exact path='/orders' component={Active}/>
-                <Route exact path='/orders/completed' component={Completed}/>
-                <Route exact path='/incoming' component={Incoming}/>
-            </Router>
         </div>
     )
 }

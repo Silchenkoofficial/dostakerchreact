@@ -1,0 +1,235 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+input {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+.new-order {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ececec;
+}
+.new-order header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+.new-order header .clear {
+  position: absolute;
+  left: 20px;
+  text-decoration: underline;
+}
+.new-order header h1 {
+  font-size: 18px;
+}
+.new-order header .close-modal {
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-order__nav {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  margin-top: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ff5c00;
+}
+.new-order__nav .price {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5c00;
+  font-size: 20px;
+  font-weight: bold;
+}
+.new-order__nav .send {
+  padding: 11px 0;
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff5c00;
+  border-radius: 10px;
+  color: #fff;
+}
+.types {
+  background-color: #fff;
+  overflow: scroll;
+  padding: 0 20px;
+}
+.types__list {
+  display: flex;
+}
+.types__list--link {
+  margin-right: 10px;
+  min-width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  border: 1px solid #ff5c00;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #ff5c00;
+  font-size: 16px;
+}
+.types__list--link.active {
+  background: #ff5c00;
+  color: #fff;
+}
+.weights {
+  overflow: scroll;
+  padding: 10px 20px 0;
+  background-color: #fff;
+}
+.weights__list {
+  display: flex;
+}
+.weights__list--link {
+  height: 30px;
+  flex: 0 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bfbfbf;
+  outline: none;
+  font-size: 16px;
+}
+.weights__list--link.active {
+  color: #ff5c00;
+  border-bottom: 1px solid #ff5c00;
+}
+.form {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+}
+.form .label {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+.form .label .que {
+  padding: 9px 8px;
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff5c00;
+  border-radius: 10px 0 0 10px;
+  font-size: 14px;
+  color: #ff5c00;
+}
+.form .label .que svg {
+  margin-right: 3px;
+}
+.form .label .input-block {
+  padding-left: 5px;
+  display: inline-flex;
+  flex: 0 0 60%;
+  border: none;
+  outline: none;
+  border: 1px solid #ff5c00;
+  border-left-width: 0;
+  color: #ff5c00;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 0 10px 10px 0;
+}
+.form .label .input-block:disabled {
+  opacity: 1;
+}
+.form .product {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #fff;
+}
+.form .product .label {
+  margin-bottom: 0;
+}
+.form .product .label .que {
+  border-radius: 10px 0 0 0;
+}
+.form .product .label .input-block {
+  border-radius: 0 10px 0 0;
+}
+.form .product .choice-product {
+  overflow: scroll;
+  width: 100%;
+  border: 1px solid #ff5c00;
+  border-top-width: 0;
+  border-radius: 0 0 10px 10px;
+}
+.form .product .choice-product .choice__list {
+  padding: 8px 10px;
+  display: flex;
+}
+.form .product .choice-product .choice__list--link {
+  padding: 5px 10px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ff5c00;
+  border-radius: 18px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #ff5c00;
+  white-space: nowrap;
+}
+.form .input-info {
+  padding: 10px 20px;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #fff;
+}
+.form .input-info .title {
+  font-size: 24px;
+  color: #ff5c00;
+  margin-bottom: 10px;
+}
+.form .input-info .time {
+  display: flex;
+}
+.form .input-info .time .label .input-block {
+  flex: 0 0 28%;
+}
+.form .input-info .time .input-block {
+  flex: 0 0 28%;
+}
+.addInputInfo {
+  background-color: #fff;
+  padding: 22px 20px;
+  display: flex;
+  color: #ff5c00;
+  font-size: 14px;
+}
+.addInputInfo svg {
+  margin-right: 5px;
+}
